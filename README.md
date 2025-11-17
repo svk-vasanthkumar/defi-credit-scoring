@@ -1,23 +1,3 @@
-import requests
-import random
-import time
-
-api_key = "Q8YUQPV92B16C0ZC"   # your write API key
-# channel_id = 3165772        # not needed in URL example
-
-while True:
-    temp = random.randint(25, 35)
-    hum  = random.randint(40, 90)
-
-    url = f"https://api.thingspeak.com/update?api_key={api_key}&field1={temp}&field2={hum}"
-    r = requests.get(url)
-    print("Sent:", temp, hum, "Response:", r.text)   # r.text will be a number (entry id) or 0 on fail
-
-    time.sleep(15)
-
-
-
-
 # defi-credit-scoring
 DeFi Wallet Credit Scoring System for Aave V2 By S V K
 
